@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Validación JS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Registro de usuario</h1>
+    <form id="registroForm">
+        <label>Nombre: <input type="text" id="nombre" required></label>
+        <label>Apellido: <input type="text" id="apellido" required></label>
+        <label>Email: <input type="email" id="email" required></label>
+        <label>Teléfono: <input type="tel" id="telefono" pattern="[0-9]{9}" required></label>
+        <label>DNI: <input type="text" id="dni" required maxlength="9"></label>
+        <label>Contraseña: <input type="password" id="password" required minlength="6"></label>
+        <label>Edad: <input type="number" id="edad" min="1" max="120" required></label>
+        <label>Fecha de nacimiento: <input type="date" id="fechaNacimiento" required></label>
+        <label>Sexo:
+            <select id="sexo" required>
+                <option value="">Selecciona</option>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+            </select>
+        </label>
+        <label>
+            Acepto las condiciones:
+            <input type="checkbox" id="condiciones" required>
+        </label>
+        <button type="submit">Registrar</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
